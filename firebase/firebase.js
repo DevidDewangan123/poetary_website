@@ -4,25 +4,18 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
+  apiKey: "AIzaSyDXlX4D20HtV0ddC70phvPpJmjS7znOXek",
+  authDomain: "poetarywebsite.firebaseapp.com",
+  projectId: "poetarywebsite",
+  storageBucket: "poetarywebsite.firebasestorage.app",
+  messagingSenderId: "586689334258",
+  appId: "1:586689334258:web:658f1100632ee256b3b96b",
+  measurementId: "G-0TCD7L66HJ"
 };
 
-
 const app = initializeApp(firebaseConfig);
-
-// Initialize Firebase Authentication
 const auth = getAuth(app);
-
-// Initialize Firestore
 const db = getFirestore(app);
-
-// Initialize Google Auth Provider
 const googleProvider = new GoogleAuthProvider();
 
-export { app,auth, db, googleProvider };
+export { app, auth, db, googleProvider };
